@@ -233,9 +233,11 @@ function theAdjNoun() {
 };
 
 function theAniNoun() {
-	let agent = chooseNoun(nouns[1], false); 
+	let agents = nouns[3].concat(nouns[4]);
+	let agent = chooseNoun(agents, false); 
 	agent = possessive(agent);
-	item = chooseNoun(nouns[0], false);
+	let items = nouns[0].concat(nouns[1], nouns[2], nouns[5]);
+	item = chooseNoun(items, false);
 	//coinflip "The"
 	agent = coinflipThe(agent);
 	//concat string
