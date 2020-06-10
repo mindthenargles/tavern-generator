@@ -1,5 +1,4 @@
 
-//action = 0, description = 1, needsPlural = 2
 let adjectives =  [
 	// 0 needs agent
 	["Laughing", "Leering", "Sneering", "Smiling", 
@@ -8,7 +7,7 @@ let adjectives =  [
 	"Slaughtered", "Roaring", "Howling", "Rearing", "Sleeping", "Hanging", 
 	"Flying", "Galloping", "Hunted", "Drowned", "Fighting", "Swollen", 
 	"Racing", "Limping", "Growling", "Yowling", "Prowling", "Horned", 
-	"Fanged", "Silent", "Blind", "Naked", "Fettered"], 
+	"Fanged", "Silent", "Blinded", "Naked", "Fettered"], 
 	// 1 racist colors
 	["Red", "Yellow", "White", "Black", "Brown", "Pale", "Dark"],
 	// 2 neutral descriptors
@@ -165,6 +164,7 @@ function sortNouns(adj) {
 			nounArray = nounArray.concat(nouns[i]);
 		}
 	} else {
+		//concat all nouns
 		for (let i = 0; i < adjectives.length; i++){
 			nounArray = nounArray.concat(nouns[i]);
 		}
@@ -282,7 +282,6 @@ function generate() {
 			sign = nounAndNoun();
 			break;
 	};
-	//test and exclude bad combos
 	//display string
 	display(sign);
 	
