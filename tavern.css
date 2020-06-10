@@ -1,0 +1,12 @@
+html {
+	background-color: #fff4e6;
+}
+
+body{
+	text-align: center;
+}
+
+div#newtext {
+	font-family: sans-serif;
+	color: #4b3832;
+}
