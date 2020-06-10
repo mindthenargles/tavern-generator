@@ -26,8 +26,7 @@ let adjectives =  [
 	"Battered", "Smooth", "Bald"], 
 	// 3 needs plural
 	["Two", "Twin", "Three", "Four"]]; 
-
-//inanimate = 0, animate = 1
+	
 let nouns = [
 	// 0 plants
 	["Rose", "Daisy", "Lily", "Violet", "Carnation", 
