@@ -127,7 +127,7 @@ function pluralize(noun) {
 		//"f" && "fe" && "ff" become "ves"
 		noun = noun.slice(0, noun.indexOf("f", (noun.length - 2)));
 		noun = noun + "ves";
-	} else if (/y$/.test(noun) && !(/ey$/.test(noun))) { 
+	} else if (/y$/.test(noun) && !(/[aeou]y$/.test(noun))) { 
 		//"y" && !"ey" becomes "ies"
 		noun = noun.slice(0, noun.length - 1)
 		noun = noun + "ies";
