@@ -232,9 +232,11 @@ function theAdjNoun() {
 };
 
 function theAniNoun() {
+	// nounArray of animates
 	let agents = nouns[3].concat(nouns[4]);
 	let agent = chooseNoun(agents, false); 
 	agent = possessive(agent);
+	//nounArray of items
 	let items = nouns[0].concat(nouns[1], nouns[2], nouns[5]);
 	item = chooseNoun(items, false);
 	//coinflip "The"
@@ -245,7 +247,10 @@ function theAniNoun() {
 };
 
 function nounAndNoun() {
-	let nounArray = nouns[0].concat(nouns[1]);
+	let nounArray = [];
+	for (let i = 0; i < adjectives.length; i++){
+			nounArray = nounArray.concat(nouns[i]);
+	}
 	let noun1 = chooseNoun(nounArray, false)
 	let noun2 = chooseNoun(nounArray, false)
 	//coinflip "The"
