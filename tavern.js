@@ -1,29 +1,36 @@
 
 //action = 0, description = 1, needsPlural = 2
-let adjectives =  [["Laughing", "Leering", "Sneering", "Smiling", 
+let adjectives =  [
+	// 0 needs agent
+	["Laughing", "Leering", "Sneering", "Smiling", 
 	"Frowning", "Glaring", "Crying", "Happy", "Frightened", "Running", 
 	"Prancing", "Dancing", "Leaping", "Wandering", "Barking", "Drunken", 
 	"Slaughtered", "Roaring", "Howling", "Rearing", "Sleeping", "Hanging", 
 	"Flying", "Galloping", "Hunted", "Drowned", "Fighting", "Swollen", 
 	"Racing", "Limping", "Growling", "Yowling", "Prowling", "Horned", 
 	"Fanged", "Silent", "Blind", "Naked", "Fettered"], 
-	["Red", "Orange", "Yellow", "Green", "Blue", "Purple", 
-	"Pink", "White", "Black", "Golden", "Silver", "Striped", "Spotted", 
-	"Ashen", "Grey", "Brown", "Dirty", "Tarnished", "Rusty", "Russet", 
+	// 1 racist colors
+	["Red", "Yellow", "White", "Black", "Brown", "Pale", "Dark"],
+	// 2 neutral descriptors
+	["Orange", "Green", "Blue", "Purple", "Pink", "Golden", "Silver", 
+	"Striped", "Spotted", "Ashen", "Grey", "Dirty", "Tarnished", "Rusty", "Russet", 
 	"Gilded", "Iron", "Tin", "Bronze", "Platinum", "Ochre", "Violet", 
-	"Gray", "Pale", "Dark", "Crimson", "Indigo", "Rosy", "Umber", 
-	"Brass", "Copper", "Lavender", "Stone", "Oaken", "Leaden", "Steel", 
-	"Saffron", "Verdant", "Bronzed", "Electrum", "Cerulean", "Maroon", 
-	"Glass", "Glazed", "Brazen", "Sanguine", "New", "Old", "Broken", "Great", 
+	"Gray", "Crimson", "Indigo", "Rosy", "Umber", "Brass", "Copper", 
+	"Lavender", "Stone", "Oaken", "Leaden", "Steel", "Saffron", 
+	"Verdant", "Bronzed", "Electrum", "Cerulean", "Maroon", "Glass", 
+	"Glazed", "Brazen", "Sanguine", "New", "Old", "Broken", "Great", 
 	"High", "Upset", "Overturned", "Rotten", "Burned", "Enchanted", 
 	"Shady", "Forsaken", "Ruined", "Near", "Far", "Hidden", "Sunlit", 
 	"Single", "Lone", "Lonely", "Double", "Triple", "Rising", "Fallen", 
 	"Crowned", "Royal", "Lucky", "Unlucky", "Cursed", "Blessed", 
 	"Battered", "Smooth", "Bald"], 
+	// 3 needs plural
 	["Two", "Twin", "Three", "Four"]]; 
 
 //inanimate = 0, animate = 1
-let nouns = [["Rose", "Daisy", "Lily", "Violet", "Carnation", 
+let nouns = [
+	// 0 plants
+	["Rose", "Daisy", "Lily", "Violet", "Carnation", 
 	"Bluebell", "Blossom", "Crocus", "Snowdrop", "Primrose", "Jonquil", 
 	"Honeysuckle", "Poppy", "Pansy", "Ambrosia", "Nightshade", "Camellia", 
 	"Jasmine", "Cereus", "Dahlia", "Geranium", "Gillyflower", "Hemlock", 
@@ -39,24 +46,27 @@ let nouns = [["Rose", "Daisy", "Lily", "Violet", "Carnation",
 	"Grape", "Gooseberry", "Mushroom", "Pineapple", "Truffle", "Strawberry", 
 	"Acorn", "Wheat", "Rye", "Potato", "Barley", "Corn", "Wormwood", 
 	"Parsley", "Leaf", "Ivy", "Bush", "Log", "Branch", "Hedge", "Tree", 
-	"Thorn", "Fern", "Vine", "Bud", "Barrel", "Hammer", "Stein", 
-	"Tankard", "Ball", "Chain", "Lamp", "Shoe", "Egg", "Nut", 
-	"Goblet", "Stool", "Chair", "Table", "Bridle", "Saddle", "Spindle", 
-	"Sword", "Spear", "Shield", "Bolt", "Nest", "Dam", "Wall", "Gate", 
-	"Door", "Jack", "Spade", "Anchor", "Sun", "Moon", "Star", "Coin", 
-	"Cup", "Rod", "Fork", "Spoon", "Knife", "Heart", "Sheaf", "Cross", 
-	"Crescent", "Spur", "Cloud", "Globe", "Crown", "Helm", "Hat", "Harp", 
-	"Pipe", "Drum", "Bugle", "Flute", "Clarion", "Trumpet", "Axe", 
-	"Lance", "Banner", "Sickle", "Key", "Anvil", "Nail", "Wheel", 
-	"Well", "Drop", "River", "Pearl", "Bucket", "Plough", "Carbuncle", 
-	"Lock", "Arrow", "Bow", "Staff", "Wand", "Orb", "Whip", "Pot", 
-	"Cane", "Collar", "Knot", "Mug", "Lantern", "Cart", "Yoke", "Tub", 
-	"Tun", "Block", "Tackle", "Bone", "Comb", "Rock", "Scale", "Pin", 
-	"Lute", "Fiddle", "Distaff", "Tap", "Cork", "Cap", "Fetter", 
-	"Gallows", "Post", "Stirrup", "Ring", "Arm", "Leg", "Head", 
-	"Hand", "Foot", "Tongue", "Beard", "Mouth", "Thumb", "Toe", 
-	"Tooth", "Skull", "Tail", "Claw", "Horn", "Hoof", "Wing", "Feather", 
-	"Antler", "Tusk", "Beak", "Fang", "Sting"], 
+	"Thorn", "Fern", "Vine"], 
+	// 1 inanimates
+	["Bud", "Barrel", "Hammer", "Stein", "Tankard", "Ball", "Chain", 
+	"Lamp", "Shoe", "Egg", "Nut", "Goblet", "Stool", "Chair", "Table", 
+	"Bridle", "Saddle", "Spindle", "Sword", "Spear", "Shield", "Bolt", 
+	"Nest", "Dam", "Wall", "Gate", "Door", "Jack", "Spade", "Anchor", 
+	"Sun", "Moon", "Star", "Coin", "Cup", "Rod", "Fork", "Spoon", 
+	"Knife", "Heart", "Sheaf", "Cross", "Crescent", "Spur", "Cloud", 
+	"Globe", "Crown", "Helm", "Hat", "Harp", "Pipe", "Drum", "Bugle", 
+	"Flute", "Clarion", "Trumpet", "Axe", "Lance", "Banner", "Sickle", 
+	"Key", "Anvil", "Nail", "Wheel", "Well", "Drop", "River", "Pearl", 
+	"Bucket", "Plough", "Carbuncle", "Lock", "Arrow", "Bow", "Staff", 
+	"Wand", "Orb", "Whip", "Pot", "Cane", "Collar", "Knot", "Mug", 
+	"Lantern", "Cart", "Yoke", "Tub", "Tun", "Block", "Tackle", "Bone", 
+	"Comb", "Rock", "Scale", "Pin", "Lute", "Fiddle", "Distaff", 
+	"Tap", "Cork", "Cap", "Fetter", "Gallows", "Post", "Stirrup", 
+	"Ring"],
+	// 2 animal parts
+	["Tooth", "Skull", "Tail", "Claw", "Horn", "Hoof", "Wing", "Feather", 
+	"Antler", "Tusk", "Beak", "Fang", "Sting", "Beard"], 
+	// 3 animals
 	["Bull", "Pony", "Stag", "Hart", "Deer", "Hind", "Wolf", 
 	"Lamb", "Goat", "Dog", "Hound", "Hare", "Coney", "Rabbit", "Hog", 
 	"Pig", "Sow", "Cow", "Steer", "Fox", "Cat", "Lion", "Tiger", "Bear", 
@@ -82,15 +92,19 @@ let nouns = [["Rose", "Daisy", "Lily", "Violet", "Carnation",
 	"Ant", "Scorpion", "Beetle", "Flea", "Dragonfly", "Butterfly", 
 	"Pegasus", "Dragon", "Roc", "Griffin", "Manticore", "Yeti", "Gorgon", 
 	"Owlbear", "Hippogriff", "Chimera", "Ettin", "Flumph", "Gargoyle", 
-	"Basilisk", "Unicorn", "Drider", "Wyvern", "Hippocampus", "Phoenix", 
-	"Dwarf", "Elf", "Orc", "Demon", "Devil", "Banshee", "Fairy", 
+	"Basilisk", "Unicorn", "Drider", "Wyvern", "Hippocampus", "Phoenix"], 
+	// 4 humanoids 
+	["Dwarf", "Elf", "Orc", "Demon", "Devil", "Banshee", "Fairy", 
 	"Mermaid", "Giant", "Kobold", "Ogre", "Troll", "Harpy", "Cyclops", 
 	"Gnoll", "Hobgoblin", "Dryad", "Undine", "Nymph", "Centaur", "Hag", 
 	"Imp", "Drow", "Goblin", "Pixie", "Bugbear", "Minotaur", "Angel", 
 	"Satyr", "Sphinx", "Knight", "Jester", "Man", "Bandit", "Gladiator", 
 	"Maid", "Maiden", "Sailor", "Soldier", "Rider", "Child", "Queen", 
 	"King", "Thief", "Smith", "Priest", "Wizard", "Witch", "Mage", 
-	"Sage", "Scholar", "Knave", "Seamstress", "Laundress"]];
+	"Sage", "Scholar", "Knave", "Seamstress", "Laundress"],
+	// 5 people parts
+	["Arm", "Leg", "Head", "Hand", "Foot", "Tongue", "Mouth", "Thumb", 
+	"Toe",]];
 
 function chooseRandInt(range) {
 	//return random integer in range == number of formats
@@ -100,7 +114,7 @@ function chooseRandInt(range) {
 
 function chooseAdj() {
 	//concat arrays for random adj
-	let allAdj = adjectives[0].concat(adjectives[1], adjectives[2]);
+	let allAdj = adjectives[0].concat(adjectives[1], adjectives[2], adjectives[3]);
 	//random index
 	let randInt = chooseRandInt(allAdj.length);
 	let adj = allAdj[randInt];
@@ -108,8 +122,8 @@ function chooseAdj() {
 };
 
 function needsPlural(adj) {
-	//return t/f adj in needsPlural array 
-	return adjectives[2].includes(adj);
+	//return t/f adj in last array in array, plural reqd
+	return adjectives[adjectives.length - 1].includes(adj);
 };
 
 function pluralize(noun) {
@@ -142,12 +156,19 @@ function pluralize(noun) {
 };
 
 function sortNouns(adj) {
-	//find adj in array
 	let nounArray = [];
+	// adj describes agent
 	if (adjectives[0].includes(adj)) {
-		nounArray = nouns[1];
+		nounArray = nouns[3].concat(nouns[4]);
+	} else if (adjectives[1].includes(adj)) {
+		//stop before last two items, people and people parts
+		for (let i = 0; i < (adjectives.length - 2); i++) {
+			nounArray = nounArray.concat(nouns[i]);
+		}
 	} else {
-		nounArray = nouns[0].concat(nouns[1]);
+		for (let i = 0; i < adjectives.length; i++){
+			nounArray = nounArray.concat(nouns[i]);
+		}
 	}
 	return nounArray;
 };
