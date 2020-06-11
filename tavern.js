@@ -37,7 +37,7 @@ let nouns = [
 	"Thistle", "Tulip", "Oleander", "Orchid", "Cherry", "Apple", 
 	"Plum", "Pear", "Peach", "Fig", "Chestnut", "Almond", "Olive", 
 	"Filbert", "Lemon", "Lime", "Mulberry", "Persimmon", "Quince", 
-	"Walnut", "Pomegranate", "Oak", "Elm", "Maple", "Pine", "Fir", 
+	"Walnut", "Pomegranate", "Coconut", "Oak", "Elm", "Maple", "Pine", "Fir", 
 	"Rowan", "Beech", "Cedar", "Willow", "Holly", "Laurel", "Linden", 
 	"Aspen", "Birch", "Ebony", "Hazel", "Larch", "Cypress", "Magnolia", 
 	"Palm", "Sycamore", "Yew", "Alder", "Juniper", "Aubergine", "Grape", 
@@ -79,7 +79,7 @@ let nouns = [
 	"Octopus", "Seahorse", "Whale", "Perch", "Trout", "Mackerel", 
 	"Herring", "Seal", "Walrus", "Carp", "Turtle", "Toad", "Frog", 
 	"Salamander", "Tortoise", "Lizard", "Snake", "Serpent", "Crocodile", 
-	"Alligator", "Viper", "Adder", "Eagle", "Cock", "Hen", "Owl", 
+	"Alligator", "Viper", "Adder", "Eagle", "Cock", "Hen", "Owl", "Swallow",
 	"Hawk", "Tern", "Gull", "Albatross", "Songbird", "Goose", "Swan", 
 	"Vulture", "Raven", "Crow", "Jay", "Cockerel", "Rooster", "Gander", 
 	"Duck", "Duckling", "Dove", "Robin", "Bluebird", "Finch", "Sparrow", 
@@ -328,7 +328,5 @@ function generate() {
  
  /* stretch goals: 
   * come back for namesPlace format with NPC generator name list
-  * css 
-  * random fonts
   * details like proprietor and type of establishment
   * */
