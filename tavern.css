@@ -8,8 +8,12 @@ body{
 }
 
 p {
-	line-height: 1.3
+	border: 4px solid #854442;
+	border-radius: 0.4em;
+	margin: 15%;
+	padding: 5%;
 }
+
 
 div#newtext {
 	color: #4b3832;
@@ -17,35 +21,40 @@ div#newtext {
 }
 
 .zero {
-    font-family: 'Autour One', cursive;
+	font-family: 'Autour One', cursive;
 }
 
 .one {
-	font-family: 'Berkshire Swash', cursive;
+	font-family: 'Berkshire Swash', cursive;	
 }
 
 .two {
-    font-family: 'Calligraffitti', cursive;
+	font-family: 'Calligraffitti', cursive;
+	font-size: 1.2em;
 }
 
 .three {
-    font-family: 'Macondo Swash Caps', cursive;
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.2em;
 }
 
 .four {
 	font-family: 'MedievalSharp', cursive;
+	font-size: 1.1em;
 }
 
 .five {
-    font-family: 'Metamorphous', cursive;
+	font-family: 'Metamorphous', cursive;
 }
 
 .six {
-    font-family: 'Permanent Marker', cursive;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 1.1em;
 }
 
 .seven {
 	font-family: 'Pirata One', cursive;
+	font-size: 1.3em;
 }
 
 .eight {
@@ -53,5 +62,6 @@ div#newtext {
 }
 
 .nine {
-    font-family: 'UnifrakturCook', cursive;
+	font-family: 'UnifrakturCook', cursive;
+	font-size: 1.1em;
 }
