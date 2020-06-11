@@ -136,8 +136,8 @@ function pluralize(noun) {
 	} else if (irrSg.indexOf(noun) != -1){ 
 		//plural is irregular
 		noun = irrPl[irrSg.indexOf(noun)];
-	} else if (/f$/.test(noun) || /fe$/.test(noun) && !(noun == ("Giraffe" || "Mastiff"))) { 
-		//"f" && "fe" && "ff" become "ves"
+	} else if ((/f$/.test(noun) || /fe$/.test(noun)) && (noun[noun.lastIndexOf("f") - 1] != "f")) { 
+		//"f" && "fe" && become "ves"
 		noun = noun.slice(0, noun.indexOf("f", (noun.length - 2)));
 		noun = noun + "ves";
 	} else if (/y$/.test(noun) && !(/[aeou]y$/.test(noun))) { 
@@ -202,6 +202,20 @@ function possessive(noun) {
 function display(tavern) {
 	let newName = document.createElement('p');
 	newName.textContent = tavern;
+	let font = chooseRandInt(4);
+	switch(font){
+		case 0: 
+		newName.className = "zero";
+		break;
+		case 1:
+		newName.className = "one";
+		break;
+		case 2: 
+		newName.className = "two";
+		break;
+		case 3: 
+		newName.className = "three";
+	}
 	newtext.prepend(newName);
 	//document.getElementById("name").textContent = tavern;
 };

@@ -7,7 +7,46 @@ body{
 }
 
 div#newtext {
-	font-family: 'New Rocker', cursive;
 	color: #4b3832;
+	
 }
 
+.zero {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.one {
+	font-family: 'Autour One', cursive;
+}
+
+.two {
+    font-family: 'Bellota', cursive;
+}
+
+.three {
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+.four {
+	font-family: 'MedievalSharp', cursive;
+}
+
+.five {
+    font-family: 'Metal Mania', cursive;
+}
+
+.six {
+    font-family: 'Metamorphous', cursive;
+}
+
+.seven {
+    font-family: 'New Rocker', cursive;
+}
+
+.eight {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.nine {
+    font-family: 'UnifrakturCook', cursive;
+}
