@@ -202,7 +202,7 @@ function possessive(noun) {
 function display(tavern) {
 	let newName = document.createElement('p');
 	newName.textContent = tavern;
-	let font = chooseRandInt(4);
+	let font = chooseRandInt(10);
 	switch(font){
 		case 0: 
 		newName.className = "zero";
@@ -215,6 +215,25 @@ function display(tavern) {
 		break;
 		case 3: 
 		newName.className = "three";
+		break;
+		case 4: 
+		newName.className = "four";
+		break;
+		case 5: 
+		newName.className = "five";
+		break;
+		case 6: 
+		newName.className = "six";
+		break;
+		case 7: 
+		newName.className = "seven";
+		break;
+		case 8: 
+		newName.className = "eight";
+		break;
+		case 9: 
+		newName.className = "nine";
+		break;
 	}
 	newtext.prepend(newName);
 	//document.getElementById("name").textContent = tavern;
